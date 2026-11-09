@@ -1,0 +1,8 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Camera điện thoại</title><link rel="stylesheet" href="/assets/style.css"><script src="/assets/camera.js" defer></script></head><body>
+<h1>Camera điện thoại</h1><p>Gửi hình ảnh về máy tính để đếm người. Không thu âm.</p>
+<section><label>Camera <select id="facing"><option value="environment">Camera sau</option><option value="user">Camera trước</option></select></label>
+<div class="actions"><button id="start">Bắt đầu truyền</button><button id="stop" class="secondary" disabled>Dừng</button></div>
+<p id="status" role="status">Chưa kết nối</p><p id="error" role="alert"></p>
+<div class="preview"><video id="video" autoplay muted playsinline></video><div class="line"></div></div>
+<p class="muted">Đặt điện thoại cố định. Giữ Safari mở và màn hình sáng. Vạch ở giữa hình; kết quả xem trên máy tính.</p><small id="traffic"></small></section>
+</body></html>

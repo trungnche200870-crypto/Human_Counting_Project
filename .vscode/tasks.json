@@ -1,0 +1,76 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Check environment",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["${workspaceFolder}/scripts/check_environment.py"],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": { "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1" }
+            },
+            "problemMatcher": [],
+            "presentation": { "reveal": "silent", "panel": "dedicated", "clear": true }
+        },
+        {
+            "label": "Setup environment",
+            "type": "process",
+            "command": "python",
+            "args": ["${workspaceFolder}/scripts/setup_environment.py"],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": { "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1" }
+            },
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated" }
+        },
+        {
+            "label": "Start HTTPS tunnel (iPhone)",
+            "type": "process",
+            "command": "${workspaceFolder}/tools/cloudflared.exe",
+            "args": ["tunnel", "--url", "http://127.0.0.1:8080", "--no-autoupdate"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated" },
+            "runOptions": { "instanceLimit": 1 }
+        },
+        {
+            "label": "Install HTTPS tunnel tool",
+            "type": "process",
+            "command": "python",
+            "args": ["${workspaceFolder}/scripts/setup_environment.py", "--with-tunnel"],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": { "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1" }
+            },
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated" }
+        },
+        {
+            "label": "Run tests",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["-m", "unittest", "discover", "-s", "tests", "-v"],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": { "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1" }
+            },
+            "problemMatcher": [],
+            "group": { "kind": "test", "isDefault": true },
+            "presentation": { "reveal": "always", "panel": "dedicated" }
+        },
+        {
+            "label": "Test sample video (YOLO + WebSocket)",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["${workspaceFolder}/tests/smoke_live_video.py", "--output", "outputs/vscode_smoke"],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": { "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1" }
+            },
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated" }
+        }
+    ]
+}

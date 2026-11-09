@@ -1,0 +1,50 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "1. Video - Streamlit",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "module": "streamlit",
+            "args": [
+                "run", "app.py",
+                "--server.address", "127.0.0.1",
+                "--server.port", "8501",
+                "--server.headless", "true",
+                "--browser.gatherUsageStats", "false"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": { "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1" },
+            "preLaunchTask": "Check environment"
+        },
+        {
+            "name": "2. Camera - YOLO11s (GPU)",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "program": "${workspaceFolder}/live_server.py",
+            "args": ["--port", "8080", "--model", "yolo11s.pt", "--image-size", "960"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": { "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1" },
+            "preLaunchTask": "Check environment"
+        },
+        {
+            "name": "3. Camera - YOLO11n (lighter)",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "program": "${workspaceFolder}/live_server.py",
+            "args": ["--port", "8080", "--model", "yolo11n.pt", "--image-size", "640"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": { "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1" },
+            "preLaunchTask": "Check environment"
+        }
+    ]
+}

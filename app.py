@@ -22,6 +22,7 @@ st.set_page_config(
 
 st.title("Human Counting System")
 st.caption("YOLO11 + ByteTrack | Computer Vision Project")
+st.info("Camera trực tiếp từ iPhone: chạy `python live_server.py`, rồi mở link quản trị hiển thị trong terminal. Chức năng bên dưới dùng cho video tải lên.")
 
 st.divider()
 

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "corridor_1",
+    "url": "https://raw.githubusercontent.com/akshun4/People-Counter/HEAD/Input/1.mp4",
+    "source": "https://github.com/akshun4/People-Counter",
+    "path": "data/public_samples/corridor_1.mp4",
+    "bytes": 14196265,
+    "sha256": "2bb71fbf76ea8c85096410a567db5dd366ae9cded6adb932b13b87d2c9c553af"
+  },
+  {
+    "name": "corridor_2",
+    "url": "https://raw.githubusercontent.com/akshun4/People-Counter/HEAD/Input/2.mp4",
+    "source": "https://github.com/akshun4/People-Counter",
+    "path": "data/public_samples/corridor_2.mp4",
+    "bytes": 26561275,
+    "sha256": "710ec47d3e0648bdbfeac652fbb3dae8a499eeda1e06192bf2c8cbdb86220273"
+  },
+  {
+    "name": "footfall",
+    "url": "https://raw.githubusercontent.com/brendanjohnw/Customer-Footfall-Count/HEAD/FootfallVideo.mp4",
+    "source": "https://github.com/brendanjohnw/Customer-Footfall-Count",
+    "path": "data/public_samples/footfall.mp4",
+    "bytes": 14700720,
+    "sha256": "37177be403b76b2033f07ada0867284d383214be012ff656b01d0cb1df9bd54d"
+  },
+  {
+    "name": "doorway",
+    "url": "https://raw.githubusercontent.com/poojavinod100/People-Counting-Crowd-Density-Detection/HEAD/videos/example_01.mp4",
+    "source": "https://github.com/poojavinod100/People-Counting-Crowd-Density-Detection",
+    "path": "data/public_samples/doorway.mp4",
+    "bytes": 17471873,
+    "sha256": "25940917176d6b1b73a6f4fdeca9235daa9ea270aecd8a33d0b75bfe5ea326a7"
+  }
+]

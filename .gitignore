@@ -8,4 +8,10 @@ outputs/
 !.env.example
 .streamlit/secrets.toml
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+tools/*.exe
+data/public_samples/
