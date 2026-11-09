@@ -1,0 +1,6 @@
+ultralytics==8.4.178
+streamlit==1.66.0
+pandas==3.0.6
+opencv-python==5.0.0.93
+torch==2.11.0
+lap==0.5.13

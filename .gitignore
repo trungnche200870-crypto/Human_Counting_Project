@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+outputs/
+*.part
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+.idea/
+.vscode/
